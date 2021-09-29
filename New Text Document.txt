@@ -1,0 +1,92 @@
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        thirdfile.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git branch
+* master
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ cls
+bash: cls: command not found
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git branch branch1.0
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git checkout
+Your branch is up to date with 'origin/master'.
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git checkout branch1.0
+Switched to branch 'branch1.0'
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (branch1.0)
+$ git add thirdfile.txt
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (branch1.0)
+$
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (branch1.0)
+$ git commit -m "this is the third file"
+[branch1.0 2c85e6e] this is the third file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 thirdfile.txt
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (branch1.0)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git push -u origin branch1.0
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 340 bytes | 340.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'branch1.0' on GitHub by visiting:
+remote:      https://github.com/SamsulAlomLaskar/ems/pull/new/branch1.0
+remote:
+To https://github.com/SamsulAlomLaskar/ems.git
+ * [new branch]      branch1.0 -> branch1.0
+Branch 'branch1.0' set up to track remote branch 'branch1.0' from 'origin'.
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git merge branch1.0
+Updating bd311d5..2c85e6e
+Fast-forward
+ thirdfile.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 thirdfile.txt
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/SamsulAlomLaskar/ems.git
+   bd311d5..2c85e6e  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git branch -d branch1.0
+Deleted branch branch1.0 (was 2c85e6e).
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git push origin -delete branch1.0
+error: did you mean `--delete` (with two dashes)?
+
+ikbal@Samsul MINGW64 /d/Ty-JavaScript-React/Git Ty (master)
+$ git push origin --delete branch1.0
+To https://github.com/SamsulAlomLaskar/ems.git
+ - [deleted]         branch1.0
+
